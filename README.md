@@ -28,10 +28,25 @@ The output is a table of reactions as rows and sample fluxes as columns grouped 
 
 ## Usage
 
-Currently, usage is limited to [jupyter notebook](https://github.com/Bisho2122/CORNETO_GEM_RNA/blob/main/tutorial.ipynb) which is an extension of CORNETO's
+To interactively inspect the results, you can run the [jupyter notebook](https://github.com/Bisho2122/CORNETO_GEM_RNA/blob/main/tutorial.ipynb) tutorial which is an extension of CORNETO's
 context-specific-networks [tutorial](https://corneto.org/dev/tutorials/context-specific-metabolic-omics.html).
 
-In the future, this will be a small snakemake pipeline after more testing.
+As another option, run the following commands in your terminal after activating the conda environment to use the example data
+```
+cd Scripts
+```
+```
+python Run_corneto_imat.py \
+-rna ../test_data/ecoli_example_data.csv \
+-meta ../test_data/ecoli_example_metadata.csv \
+-gem ../test_data/ecoli_core.xml \
+-disc quantile \
+-o ../test_data
+```
+To get more information about CLI options :
+```
+python Run_corneto_imat.py --help
+```
 
 ## Contributing
 1. Fork this repo
